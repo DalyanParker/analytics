@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header.banner {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  width: 100%;
+  min-height: 500px;
+}
+
+header.banner h1 {
+  margin-top: 60px;
+  font-size: 3em;
+}
+
+header.banner p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+header.banner .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #ff9900;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header.banner .cta-button:hover {
+  background-color: #cc7a00;
+}
+
+section.trumpet-gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+}
+
+section.trumpet-gallery h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+section.trumpet-gallery .trumpet-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section.trumpet-gallery .trumpet-item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+section.trumpet-gallery .trumpet-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+section.trumpet-gallery .trumpet-item p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: black;
+
+}
+
+section.trumpet-gallery .trumpet-item img:hover {
+  transform: scale(1.05);
+}
+
+section.pricing-section {
+  margin-top: 50px;
+  min-height: 400px;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+section.pricing-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+section.pricing-section .pricing-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section.pricing-section .pricing-item {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.pricing-section .pricing-item h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+section.pricing-section .pricing-item p {
+  font-size: 1.2em;
+  color: #ff9900;
+}
